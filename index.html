@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебное портфолио Алмаса</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Основная навигация">
+      <a href="#about">Обо мне</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about" class="profile">
+      <p id="greeting" aria-live="polite">Привет! Я Алмас.</p>
+      <h1>Учебное портфолио Алмаса</h1>
+      <p>Я Алмас, начинающий разработчик. Изучаю веб-технологии и создаю свои первые цифровые проекты. Это вымышленный образ для учебного портфолио.</p>
+      <h2>Навыки</h2>
+      <ul class="skills">
+        <li class="tag tag-accent">HTML</li>
+        <li class="tag">CSS</li>
+        <li class="tag">JavaScript</li>
+      </ul>
+      <a href="#projects">Посмотреть проекты</a>
+      <button id="hello" type="button">Поздороваться</button>
+    </section>
+
+    <section id="projects">
+      <h2>Проекты</h2>
+      <article class="project-card">
+        <div class="project-preview">ALMA</div>
+        <div class="project-copy">
+          <h3>ALMA — учебный сайт</h3>
+          <p>Мой учебный проект: практикую HTML, CSS и JavaScript, работаю над интерфейсом и интерактивностью.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Здесь можно познакомиться с моей учебной формой. Реальные контактные данные я не добавляю.</p>
+      <button id="contact-button" type="button" aria-expanded="false" aria-controls="contact-form">Показать учебную форму</button>
+      <form id="contact-form" hidden aria-describedby="form-note" autocomplete="off">
+        <p id="form-note">Учебная форма ничего не отправляет и не хранит. Вводите только вымышленные данные.</p>
+        <label for="practice-message">Учебное сообщение</label>
+        <input id="practice-message" type="text" placeholder="Привет из учебного проекта!" autocomplete="off">
+      </form>
+    </section>
+  </main>
+</body>
+</html>
