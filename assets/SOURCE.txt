@@ -1,0 +1,5 @@
+arsenal-crest.svg
+Source: https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg
+Description: Arsenal FC crest, used as a local decorative background at the user's request.
+Reference: https://en.wikipedia.org/wiki/Arsenal_F.C.
+The club emblem belongs to its respective rights holders.

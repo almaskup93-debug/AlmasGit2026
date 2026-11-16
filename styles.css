@@ -1,0 +1,313 @@
+:root {
+  color-scheme: dark;
+  --background: #080d17;
+  --surface: #101827;
+  --text: #f5f7fc;
+  --muted: #b9c4d6;
+  --accent: #ff6479;
+  --accent-soft: #351b2a;
+  --border: #304057;
+  --cyan: #83e4e3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  background-image:
+    linear-gradient(rgba(8, 13, 23, 0.88), rgba(8, 13, 23, 0.94)),
+    url("assets/arsenal-crest.svg");
+  background-position: center, right 5vw top 120px;
+  background-size: cover, min(72vw, 720px) auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.site-header,
+.navigation,
+.skills,
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-header {
+  justify-content: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(8, 13, 23, 0.92);
+}
+
+.navigation {
+  align-items: center;
+  justify-content: center;
+  gap: 12px 28px;
+}
+
+.navigation a {
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: var(--cyan);
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+section + section {
+  margin-top: 40px;
+}
+
+.profile,
+.project-card {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.profile {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 5vw, 48px);
+  border-top: 2px solid var(--accent);
+  background-image:
+    linear-gradient(90deg, rgba(16, 24, 39, 0.99) 15%, rgba(16, 24, 39, 0.86) 62%, rgba(16, 24, 39, 0.3)),
+    url("assets/arsenal-crest.svg");
+  background-position: center, right 24px center;
+  background-repeat: no-repeat;
+  background-size: cover, auto 82%;
+}
+
+.profile > p {
+  max-width: 540px;
+}
+
+.profile > a {
+  display: inline-block;
+  margin: 0 12px 16px 0;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.035em;
+  max-width: 650px;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+#greeting {
+  margin-bottom: 12px;
+  color: var(--cyan);
+  font-weight: 700;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+#greeting::before {
+  content: "> ";
+  color: var(--accent);
+}
+
+.skills {
+  gap: 10px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 6px 16px;
+  border: 1px solid #634053;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.tag-accent {
+  background: #b51636;
+  border-color: #e34763;
+  color: #fff;
+}
+
+.project-card {
+  align-items: center;
+  gap: 28px;
+}
+
+.project-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 240px;
+  min-width: 0;
+  min-height: 200px;
+  padding: 24px;
+  border: 1px solid #773349;
+  border-radius: 12px;
+  background-color: #4a1428;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(135deg, #8c1938, #111d35);
+  background-size: 24px 24px, 24px 24px, cover;
+  color: #fff;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.project-copy {
+  flex: 2 1 280px;
+  min-width: 0;
+}
+
+.project-copy p {
+  margin-bottom: 0;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+button,
+input {
+  max-width: 100%;
+  font: inherit;
+}
+
+button {
+  padding: 12px 20px;
+  border: 1px solid #ed4a65;
+  border-radius: 10px;
+  background: #ac1834;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c21d3d;
+}
+
+#contacts {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+#contact-form {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #60718c;
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+/* Прозрачный декоративный слой не перехватывает мышь и не меняет вёрстку. */
+.pixel-trail {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pixel-trail__particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  clip-path: polygon(50% 0, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0 50%, 35% 35%);
+  pointer-events: none;
+}
+
+.pixel-trail__snowflake {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  clip-path: none;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+}
+
